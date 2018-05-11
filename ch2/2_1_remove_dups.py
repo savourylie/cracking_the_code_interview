@@ -1,4 +1,5 @@
 from linkedlist import Node, create_linkedlist, linkedlist_equal, print_linkedlist
+
 def remove_dups(ll):
 	unique_set = set()
 	head = ll
@@ -55,7 +56,7 @@ if __name__ == '__main__':
 
 	assert linkedlist_equal(remove_dups(ll1), ll2)
 	assert linkedlist_equal(remove_dups_no_buffer(ll1), ll2)
-	
+
 	print("All tests passed.")
 
 
