@@ -6,11 +6,15 @@ class Node(object):
 def create_linkedlist(iterable):
 	head = Node()
 	current = head
+	prev = None
 
 	for i, x in enumerate(iterable):
 		current.value = x
 		current.next = Node()
+		prev = current
 		current = current.next
+
+	prev.next = None
 
 	return head
 
@@ -43,8 +47,9 @@ def linkedlist_equal(ll1, ll2):
 
 if __name__ == '__main__':
 	ll1 = create_linkedlist([1, 2, 3, 4, 5, 6, 7])
-	ll2 = create_linkedlist([1, 2, 3, 4, 5, 6])
+	ll2 = create_linkedlist([1, 2, 3, 4, 5, 6, 7])
 
+	print_linkedlist(ll1)
 	print(linkedlist_equal(ll1, ll2))
 
 
